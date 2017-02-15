@@ -1,0 +1,6 @@
+#!/usr/bin/make -f
+
+export DH_VIRTUALENV_INSTALL_ROOT=/opt/venv
+
+%:
+	dh $@ --with python-virtualenv -S --install-suffix piccolo2-player --preinstall pyqt-distutils
