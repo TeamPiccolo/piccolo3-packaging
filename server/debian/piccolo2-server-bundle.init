@@ -20,7 +20,7 @@
 
 . /lib/lsb/init-functions
 
-PICCOLO=/usr/bin/piccolo2-server
+PICCOLO=/usr/sbin/piccolo2-server
 PIDFILE=/var/run/piccolo.pid
 LOG=/var/log/piccolo.log
 CFG=/etc/piccolo.cfg
