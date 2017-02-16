@@ -1,0 +1,4 @@
+#!/bin/bash
+. /opt/venv/piccolo2-player/bin/activate
+exec piccolo2-player $*
+
