@@ -8,6 +8,6 @@ Standards-Version: 3.9.5
 Package: piccolo2-server-bundle
 Architecture: any
 Pre-Depends: dpkg (>= 1.16.1), python2.7, ${misc:Pre-Depends}
-Depends: ${python:Depends}, ${misc:Depends}, python-numpy, python-serial, python-psutil, python-configobj, python-daemon
+Depends: ${python:Depends}, ${misc:Depends}, python-numpy, python-serial, python-psutil, python-configobj, python-daemon, python-tz
 Description: Part of the piccol2 system
  This package provides common modules
