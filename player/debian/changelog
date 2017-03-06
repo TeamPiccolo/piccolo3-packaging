@@ -1,3 +1,9 @@
+piccolo2-player-bundle (0.2-1) yakkety; urgency=medium
+
+  * new bundle 
+
+ -- Magnus Hagdorn <mhagdorn@akran>  Mon, 06 Mar 2017 19:38:12 +0000
+
 piccolo2-player-bundle (0.1-1) unstable; urgency=medium
 
   * Initial release. 
