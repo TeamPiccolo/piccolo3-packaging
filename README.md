@@ -19,7 +19,7 @@ First of all you need to install some dependencies
 install
 ```
 sudo apt-get install dh-virtualenv
-````
+```
 
 ### On Raspbian
 The build process needs version ```0.8``` of newer of ```db-virtualenv```. Type these commands to install the latest version of ```db-virtualenv```:
