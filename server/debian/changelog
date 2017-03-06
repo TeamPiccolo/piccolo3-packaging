@@ -1,11 +1,12 @@
-piccolo2-server-bundle (0.3-2) UNRELEASED; urgency=medium
+piccolo2-server-bundle (0.3-3) unstable; urgency=medium
 
   * add dependency
   * new upstream
   * new upstream
   * fix dependency
+  * include client
 
- -- Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>  Fri, 03 Mar 2017 09:33:02 +0000
+ -- Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>  Mon, 06 Mar 2017 19:30:54 +0000
 
 piccolo2-server-bundle (0.1-1) unstable; urgency=medium
 
