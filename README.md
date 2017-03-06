@@ -15,6 +15,13 @@ Note: this repository does not contain the Piccolo software itself, only the scr
 ## Installing dependencies
 First of all you need to install some dependencies
 
+### On Ubuntu 16.04 and newer
+install
+```
+sudo apt-get install dh-virtualenv
+````
+
+### On Raspbian
 The build process needs version ```0.8``` of newer of ```db-virtualenv```. Type these commands to install the latest version of ```db-virtualenv```:
 
 ```
@@ -26,6 +33,7 @@ dpkg-buildpackage -us -uc -b
 sudo dpkg -i ../dh-virtualenv_1.0-1.deb
 ```
 
+### On both systems
 Then install some other dependencies:
 
 ```
@@ -64,9 +72,21 @@ The system packages which ever version of the
 code is checked out in the parent directory. The build process may take some time.
 
 
-## Update version number?
+## Update version number and revision history
+Use the program ```dch``` to manage the debian changelog:
+```
+dch --newversion xxx-y # to release a new version xxx-y
+dch --increment # to increment the version, ie y+1
+dch -r # to mark the package as released
+```
+As always run
+```
+man dch
+```
+to get all the info.
 
-## Update revision history?
+### TODO
+release the indevidual packages
 
 ## Install package on Piccolo
 
