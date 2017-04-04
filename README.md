@@ -54,23 +54,12 @@ hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo-hardware
 ```
 
 ## Building the packages
-
-The package bundles are built by running
-
-```
-dpkg-buildpackage -us -uc
-```
-
-In the corresponding subdirectory. For example:
-
+The package bundles are built by running the ```dpkg-buildpackage``` command in the corresponding subdirectory. For example:
 ```
 cd /home/pi/somewhere/piccolo2-packaging/client
 dpkg-buildpackage -us -uc
 ```
-
-The system packages which ever version of the
-code is checked out in the parent directory. The build process may take some time.
-
+The system packages which ever version of the code is checked out in the parent directory. This takes about 10 min.
 
 ## Update version number and revision history
 Use the program ```dch``` to manage the debian changelog:
