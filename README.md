@@ -1,9 +1,10 @@
-This repository contains scripts and instructions for packing the Piccolo softwasre for installation on Debian-based systems such as Debian, Ubuntu and Raspbian.
+This repository (piccolo2-packaging) contains scripts and instructions for packing the Piccolo softwasre for installation on Debian-based systems such as Debian, Ubuntu and Raspbian.
+
+These instructions are intended for **Piccolo developers**, not users. The [instructions for users](file:///home/iain/Piccolo/piccolo/Documentation/_build/singlehtml/index.html#document-installing) are in the Piccolo User Guide.
 
 The result of running these scripts is software package files in the ```deb``` file format.
 
 Note: this repository does not contain the Piccolo software itself, only the scripts required to make the packages.
-
 
 ## Package bundles
 3 different package bundles are provided:
