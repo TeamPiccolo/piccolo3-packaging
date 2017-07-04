@@ -1,44 +1,39 @@
-This repository (piccolo2-packaging) contains scripts and instructions for packing the Piccolo softwasre for installation on Debian-based systems such as Debian, Ubuntu and Raspbian.
+This repository (piccolo2-packaging) contains scripts and instructions for creating ```deb``` package files for use with the *Piccolo* spectroradiometer. The package files contain the firmware for the instrument and the software for the laptop (or other computer) used to control the instrument.
 
-These instructions are intended for **Piccolo developers**, not users. The [instructions for users](file:///home/iain/Piccolo/piccolo/Documentation/_build/singlehtml/index.html#document-installing) are in the Piccolo User Guide.
+The package files are in the Debian package file format (```deb```). They can be installed on Debian-based operating systems including Ubuntu and Raspbian.
 
-The result of running these scripts is software package files in the ```deb``` file format.
+The instructions below describe how to create the deb files and are intended for the developers of the Piccolo instrument.
 
-Note: this repository does not contain the Piccolo software itself, only the scripts required to make the packages.
+To install the ```deb``` files onto a Piccolo instrument or a laptop please follow [the instructions in the Piccolo User Guide](http://piccolo.readthedocs.io/en/latest/installing.html).
+
+This repository does not contain the Piccolo software itself, only the scripts required to make the packages. The Piccolo software is available from Bitbucket in the [piccolo2-server](https://bitbucket.org/teampiccolo/piccolo2-server), [piccolo2-client](https://bitbucket.org/teampiccolo/piccolo2-client) and [piccolo2-common](https://bitbucket.org/teampiccolo/piccolo2-common) repositories.
+
+More information about the Piccolo can be found in the [Piccolo User Guide](http://piccolo.readthedocs.io/en/latest/index.html).
+
+## Required hardware
+A Raspberry Pi is required to compile the packages. The packages must be compiled on a Raspberry Pi and not an Ubuntu laptop or any other computer.
 
 ## Package bundles
 3 different package bundles are provided:
 
-* Client, ```piccolo2-client-bundle```, the Piccolo command line client
-* Player, ```piccolo2-player-bundle```, the Piccolo GUI
 * Server, ```piccolo2-server-bundle```, the Piccolo Server
+* Player, ```piccolo2-player-bundle```, the Piccolo GUI
+* Client, ```piccolo2-client-bundle```, the Piccolo command line client
 
 ## Installing dependencies
-First of all you need to install some dependencies
-
-### On Ubuntu 16.04 and newer
-install
+First of all you need to install some dependencies. On the Raspberry Pi, type:
 ```
-sudo apt-get install dh-virtualenv
+sudo apt-get update
+sudo apt-get install devscripts debhelper cython
 ```
-
-### On Raspbian
-The build process needs version ```0.8``` of newer of ```db-virtualenv```. Type these commands to install the latest version of ```db-virtualenv```:
-
+The build process needs version 0.8 or newer of ```dh-virtualenv```. This cannot be installed with ```apt-get``` because ```apt-get``` will installs an old version. Instead, the commands below can be used to install the latest version of ```dh-virtualenv```. If an old version of dh-virtualenv was installed it will be upgraded.
 ```
-sudo apt-get install devscripts python-virtualenv git equivs
+sudo apt-get install python-virtualenv git equivs
 git clone https://github.com/spotify/dh-virtualenv.git
 cd dh-virtualenv
 sudo mk-build-deps -ri
 dpkg-buildpackage -us -uc -b
 sudo dpkg -i ../dh-virtualenv_1.0-1.deb
-```
-
-### On both systems
-Then install some other dependencies:
-
-```
-sudo apt-get install devscripts debhelper
 ```
 
 ## Clone the required repositories
@@ -60,6 +55,12 @@ The package bundles are built by running the ```dpkg-buildpackage``` command in 
 cd /home/pi/somewhere/piccolo2-packaging/client
 dpkg-buildpackage -us -uc
 ```
+If the error message
+```
+dpkg-checkbuilddeps: Unmet build dependencies: dh-virtualenv (>= 0.8)
+```
+is reported, upgrade dh-virtualenv to version 1.0-1 (see Installing Dependencies above).
+
 The system packages which ever version of the code is checked out in the parent directory. This takes about 10 min.
 
 ## Update version number and revision history
@@ -80,6 +81,4 @@ release the indevidual packages
 
 ## Install package on Piccolo
 
-```
-sudo dpkg --install piccolo2-server-bundle-0.1-1.deb'
-```
+To isntall the packages please follow [the instructions in the Piccolo User Guide](http://piccolo.readthedocs.io/en/latest/installing.html).
