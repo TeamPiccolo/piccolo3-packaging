@@ -1,3 +1,9 @@
+piccolo2-server-bundle (0.4-1) unstable; urgency=medium
+
+  * new upstream
+
+ -- Magnus Hagdorn <mhagdorn@piccolo2>  Thu, 21 Dec 2017 10:32:34 +0000
+
 piccolo2-server-bundle (0.3-3) unstable; urgency=medium
 
   * add dependency
