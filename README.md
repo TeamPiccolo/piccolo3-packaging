@@ -37,7 +37,7 @@ sudo dpkg -i ../dh-virtualenv_1.0-1.deb
 ```
 
 ## Clone the required repositories
-The Piccolo repositories are required.
+If you have not already cloned the Piccolo repositories the clone them:
 
 ```
 cd /home/pi/somewhere
@@ -48,6 +48,41 @@ hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-server
 hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-common
 hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo-hardware
 ```
+
+If you have already cloned the Piccolo repositories then update them:
+
+```
+cd /home/pi/somewhere
+
+cd piccolo2-packaging
+hg pull
+hg update
+cd ..
+
+cd piccolo2-client
+hg pull
+hg update
+cd ..
+
+cd piccolo2-server
+hg pull
+hg update
+cd ..
+
+cd piccolo2-common
+hg pull
+hg update
+cd ..
+
+
+
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-packaging
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-client
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-server
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-common
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo-hardware
+```
+
 
 ## Building the packages
 The package bundles are built by running the ```dpkg-buildpackage``` command in the corresponding subdirectory. For example:
