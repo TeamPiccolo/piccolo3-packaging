@@ -1,2 +1,3 @@
 piccolo2-server /usr/sbin
+piccolo2-triggered /usr/bin
 piccolo.cfg /etc/
