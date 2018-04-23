@@ -1,3 +1,9 @@
+piccolo2-server-bundle (0.5-2) UNRELEASED; urgency=medium
+
+  * minor fixes to trigger script and hardware module
+
+ --  Magnus Hagdorn <Magnus.Hagdorn@ed.ac.uk>  Mon, 23 Apr 2018 15:34:24 +0000
+
 piccolo2-server-bundle (0.5-1) unstable; urgency=medium
 
   * use server based on trigger branch
