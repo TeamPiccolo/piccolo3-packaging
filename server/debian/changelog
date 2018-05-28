@@ -1,3 +1,9 @@
+piccolo2-server-bundle (0.5-4) UNRELEASED; urgency=medium
+
+  * load calibration coefficients
+
+ --  <pi@piccolo-dev>  Mon, 28 May 2018 16:00:00 +0000
+
 piccolo2-server-bundle (0.5-3) UNRELEASED; urgency=medium
 
   * various improvements to messaging
