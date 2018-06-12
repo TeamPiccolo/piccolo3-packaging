@@ -1,4 +1,4 @@
 ../../piccolo2-common
 ../../piccolo2-client
 ../../piccolo2-player
-../../piccolo-hardware
+#../../piccolo-hardware
