@@ -1,0 +1,20 @@
+Source: seabreeze
+Maintainer: Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Homepage: https://oceanoptics.com/product/seabreeze/
+Build-Depends: debhelper (>= 9)
+
+Package: seabreeze
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Device driver library for Ocean Optics spectormeters
+ SeaBreeze is a minimalistic, multi-platform (Windows, Linux, MacOS) device
+ driver for Ocean Optics spectrometers, designed specifically for embedded
+ applications needing to run in resource-constrained hardware environments.
+ SeaBreeze provides a fully working and tested REFERENCE IMPLEMENTATION of the
+ Ocean Optics USB interface, demonstrating how Ocean Optics spectrometers can
+ be commanded and controlled from C/C++. It is provided with full C/C++ source
+ code so that customers can customize and extend it to support exactly those
+ features and functions they require.

@@ -1,0 +1,41 @@
+Description: add install target
+ add install target to Makefile
+ .
+ seabreeze (3.0.11-1) UNRELEASED; urgency=medium
+ .
+   * Initial release. (Closes: #XXXXXX)
+Author: <magnus.hagdorn@ed.ac.uk>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- seabreeze-3.0.11.orig/Makefile
++++ seabreeze-3.0.11/Makefile
+@@ -19,7 +19,7 @@ help:
+ 	@echo "  make winclean          Invoke Visual Studio's 'clean' target"
+ 	@echo "  make doc               Generate rendered documentation"
+ 	@echo "  make help              This screen"
+-	
++
+ seabreeze: lib/$(LIBNAME)
+ 	make -C test
+ 	make -C sample-code
+@@ -87,3 +87,8 @@ doc: doc-init doc-user doc-dev
+ 	@ls -lah doc/rtf/*Manual.rtf
+ 	@echo
+ 
++install: seabreeze
++	install -D lib/libseabreeze.so $(DESTDIR)$(prefix)/lib/libseabreeze.so
++	install -d $(DESTDIR)$(prefix)/include && cp -r include $(DESTDIR)$(prefix)/include/seabreeze
++	install -D sample-code/c/seabreeze-util $(DESTDIR)$(prefix)/bin/seabreeze-util
++	install -D os-support/linux/10-oceanoptics.rules $(DESTDIR)/etc/udev/rules.d/10-oceanoptics.rules

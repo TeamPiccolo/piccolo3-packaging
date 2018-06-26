@@ -1,0 +1,15 @@
+Source: seabreeze
+Maintainer: Andreas Poehlmann <mail@andreaspoehlmann.de>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-all-dev (>= 2.6.6-3), debhelper (>= 9)
+Standards-Version: 3.9.1
+
+Package: python-seabreeze
+Architecture: any
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
+Description: Python interface module for oceanoptics spectrometers
+ Python-seabreeze is the easy way to access your Ocean Optics spectrometers from
+ python. It wraps the SeaBreeze library provided by Ocean Optics to communicate
+ with the spectrometer. If SeaBreeze is not available it can fallback to a pyUSB
+ based reimplementation. 
