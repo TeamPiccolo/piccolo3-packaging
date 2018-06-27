@@ -4,7 +4,7 @@ Description: add install target
  seabreeze (3.0.11-1) UNRELEASED; urgency=medium
  .
    * Initial release. (Closes: #XXXXXX)
-Author: <magnus.hagdorn@ed.ac.uk>
+Author: Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>
 
 ---
 The information above should follow the Patch Tagging Guidelines, please
@@ -35,7 +35,7 @@ Last-Update: <YYYY-MM-DD>
  	@echo
  
 +install: seabreeze
-+	install -D lib/libseabreeze.so $(DESTDIR)$(prefix)/lib/libseabreeze.so
++	install -D lib/libseabreeze.so $(DESTDIR)$(prefix)/lib/$(DEB_HOST_MULTIARCH)/libseabreeze.so
 +	install -d $(DESTDIR)$(prefix)/include && cp -r include $(DESTDIR)$(prefix)/include/seabreeze
 +	install -D sample-code/c/seabreeze-util $(DESTDIR)$(prefix)/bin/seabreeze-util
 +	install -D os-support/linux/10-oceanoptics.rules $(DESTDIR)/etc/udev/rules.d/10-oceanoptics.rules

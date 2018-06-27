@@ -4,5 +4,5 @@
 # Tue, 26 Jun 2018 15:36:38 +0000
 export PYBUILD_NAME=seabreeze
 %:
-	dh $@ --with python2 --buildsystem=pybuild
+	dh $@ --with python2,python3 --buildsystem=pybuild
 
