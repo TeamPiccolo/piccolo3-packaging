@@ -1,0 +1,54 @@
+Source: seabreeze
+Maintainer: Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>
+Section: science
+Priority: optional
+Standards-Version: 3.9.5
+Homepage: https://oceanoptics.com/product/seabreeze/
+Build-Depends: debhelper (>= 9)
+
+Package: seabreeze
+Architecture: any
+Multi-Arch: foreign
+Depends: libseabreeze (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Description: Device driver library for Ocean Optics spectormeters - Utility programs
+ SeaBreeze is a minimalistic, multi-platform (Windows, Linux, MacOS) device
+ driver for Ocean Optics spectrometers, designed specifically for embedded
+ applications needing to run in resource-constrained hardware environments.
+ SeaBreeze provides a fully working and tested REFERENCE IMPLEMENTATION of the
+ Ocean Optics USB interface, demonstrating how Ocean Optics spectrometers can
+ be commanded and controlled from C/C++. It is provided with full C/C++ source
+ code so that customers can customize and extend it to support exactly those
+ features and functions they require.
+
+Package: libseabreeze
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: auto-generated package by debmake: lib #1
+ This package contains the shared library.: #1
+
+Package: libseabreeze-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libseabreeze (= ${binary:Version}), ${misc:Depends}
+Description: auto-generated package by debmake: dev #2
+ This package contains the development files.: #2
+
+Package: seabreeze-dbg
+Section: debug
+Architecture: any
+Multi-Arch: same
+Depends: seabreeze (= ${binary:Version}), ${misc:Depends}
+Description: auto-generated package by debmake: dbg #3
+ This package contains the debugging symbols.: #3
+
+Package: libseabreeze-dbg
+Section: debug
+Architecture: any
+Multi-Arch: same
+Depends: libseabreeze (= ${binary:Version}), ${misc:Depends}
+Description: auto-generated package by debmake: dbg #4
+ This package contains the debugging symbols.: #4
