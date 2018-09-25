@@ -3,4 +3,4 @@
 export DH_VIRTUALENV_INSTALL_ROOT=/opt/venv
 
 %:
-	dh $@ --with python-virtualenv -S --install-suffix piccolo2-server
+	dh $@ --with python-virtualenv -S --install-suffix piccolo2-server  --upgrade-pip --preinstall setuptools-scm==1.15.6

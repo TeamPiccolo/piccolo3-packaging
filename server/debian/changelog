@@ -1,3 +1,9 @@
+piccolo2-server-bundle (0.6-3) unstable; urgency=medium
+
+  * change shutter configuration
+
+ --  <pi@piccolo-dev>  Thu, 30 Aug 2018 10:29:00 +0000
+
 piccolo2-server-bundle (0.6-2) unstable; urgency=medium
 
   * fix minimum integration time of USB2000+ spectrometer

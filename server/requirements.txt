@@ -1,3 +1,4 @@
+setuptools-scm==1.15.6
 ../../piccolo2-common
 ../../piccolo2-client
 ../../piccolo2-server
