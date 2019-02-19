@@ -1,3 +1,9 @@
+piccolo2-server-bundle (0.6-4) unstable; urgency=medium
+
+  * fix wavelength calibration config
+
+ --  <pi@piccolo-dev>  Tue, 19 Feb 2019 14:48:16 +0000
+
 piccolo2-server-bundle (0.6-3) unstable; urgency=medium
 
   * change shutter configuration
