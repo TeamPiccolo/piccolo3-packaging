@@ -1,0 +1,12 @@
+[Unit]
+Description=piccolo server
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/piccolo2
+ExecStart=/usr/sbin/piccolo2-server -l $LOG -s $CFG
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

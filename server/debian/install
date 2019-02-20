@@ -1,3 +1,5 @@
 piccolo2-server /usr/sbin
+piccolo2-reboot /usr/sbin
 piccolo2-triggered /usr/bin
 piccolo.cfg /etc/
+piccolo2 /etc/default

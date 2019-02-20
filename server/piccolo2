@@ -1,0 +1,5 @@
+# default settings for piccolo2 server
+
+PIDFILE=/var/run/piccolo.pid
+LOG=/var/log/piccolo.log
+CFG=/etc/piccolo.cfg

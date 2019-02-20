@@ -1,3 +1,10 @@
+piccolo2-server-bundle (0.6-5) UNRELEASED; urgency=medium
+
+  * add power button
+  * use systemd service files
+
+ --  <pi@piccolo-dev>  Wed, 20 Feb 2019 09:52:29 +0000
+
 piccolo2-server-bundle (0.6-4) unstable; urgency=medium
 
   * fix wavelength calibration config
