@@ -29,11 +29,3 @@ DEB_HOST_ARCH_OS = $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 
 ### debmake generated override targets
 ### See https://www.debian.org/doc/manuals/developers-reference/best-pkging-practices.html#bpp-dbg
-override_dh_strip:
-	dh_strip -Xlibseabreeze --dbg-package=seabreeze-dbg
-	dh_strip -Xseabreeze --dbg-package=libseabreeze-dbg
-
-override_dh_auto_install:
-	$(MAKE) DESTDIR=$$(pwd)/debian/tmp prefix=/usr install
-
-

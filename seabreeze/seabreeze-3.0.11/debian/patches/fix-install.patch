@@ -1,0 +1,26 @@
+add install target and fix Makefile
+--- a/Makefile
++++ b/Makefile
+@@ -24,6 +24,12 @@
+ 	make -C test
+ 	make -C sample-code
+ 
++install:	seabreeze
++	install -D lib/libseabreeze.so $(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)/libseabreeze.so
++	install -d $(DESTDIR)/usr/include && cp -r include $(DESTDIR)/usr/include/seabreeze
++	install -D sample-code/c/seabreeze-util $(DESTDIR)/usr/bin/seabreeze-util
++	install -D os-support/linux/10-oceanoptics.rules $(DESTDIR)/etc/udev/rules.d/10-oceanoptics.rules
++
+ lib/libseabreeze.$(SUFFIX): initialize
+ 	$(info flags = $(LFLAGS_LIB))
+ 	$(MAKE) -C src
+--- a/common.mk
++++ b/common.mk
+@@ -8,7 +8,6 @@
+               -Wall \
+               -Wunused \
+               -Wmissing-include-dirs \
+-              -Werror \
+               -O0 \
+               -fpic \
+               -fno-stack-protector \
