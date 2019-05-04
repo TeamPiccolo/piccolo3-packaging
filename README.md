@@ -20,17 +20,8 @@ A Raspberry Pi is required to compile the packages. The packages must be compile
 ## Installing dependencies
 First of all you need to install some dependencies. On the Raspberry Pi, type:
 ```
-sudo apt-get update
-sudo apt-get install devscripts debhelper cython
-```
-The build process needs version 0.8 or newer of ```dh-virtualenv```. This cannot be installed with ```apt-get``` because ```apt-get``` will installs an old version. Instead, the commands below can be used to install the latest version of ```dh-virtualenv```. If an old version of dh-virtualenv was installed it will be upgraded.
-```
-sudo apt-get install python-virtualenv git equivs
-git clone https://github.com/spotify/dh-virtualenv.git
-cd dh-virtualenv
-sudo mk-build-deps -ri
-dpkg-buildpackage -us -uc -b
-sudo dpkg -i ../dh-virtualenv_1.0-1.deb
+sudo apt update
+sudo apt install devscripts debhelper dh-virtualenv
 ```
 
 ## Clone the required repositories

@@ -1,3 +1,0 @@
-#!/bin/bash
-. /opt/venv/piccolo2-server/bin/activate
-exec piccolo2-triggered $*

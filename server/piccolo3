@@ -1,4 +1,4 @@
-# default settings for piccolo2 server
+# default settings for piccolo3 server
 
 PIDFILE=/var/run/piccolo.pid
 LOG=/var/log/piccolo.log

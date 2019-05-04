@@ -1,0 +1,10 @@
+[Unit]
+Description=piccolo3-reboot daemon
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/piccolo3-reboot
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -3,8 +3,11 @@
 export DH_VIRTUALENV_INSTALL_ROOT=/opt/venv
 
 %:
-	dh $@ --with systemd --with python-virtualenv -S --install-suffix piccolo2-server  --upgrade-pip --preinstall setuptools-scm==1.15.6
+	dh $@ --with systemd --with python-virtualenv 
+
+override_dh_virtualenv:
+	dh_virtualenv --python python3 --use-system-packages --install-suffix piccolo3-server
 
 override_dh_installinit:
-	dh_installinit --name=piccolo2-server
-	dh_installinit --name=piccolo2-reboot
+	dh_installinit --name=piccolo3-server
+	dh_installinit --name=piccolo3-reboot
