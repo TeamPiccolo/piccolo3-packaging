@@ -1,14 +1,11 @@
-This repository (piccolo2-packaging) contains scripts and instructions for creating ```deb``` package files for use with the *Piccolo* spectroradiometer. The package files contain the firmware for the instrument and the software for the laptop (or other computer) used to control the instrument.
+This repository (piccolo3-packaging) contains scripts and instructions for creating ```deb``` package files for use with the *Piccolo* spectroradiometer. The package files contain the firmware for the instrument and the software for the laptop (or other computer) used to control the instrument.
 
 The package files are in the Debian package file format (```deb```). They can be installed on Debian-based operating systems including Ubuntu and Raspbian.
 
 The instructions below describe how to create the deb files and are intended for the developers of the Piccolo instrument.
 
-To install the ```deb``` files onto a Piccolo instrument or a laptop please follow [the instructions in the Piccolo User Guide](http://piccolo.readthedocs.io/en/latest/installing.html).
+This repository does not contain the Piccolo software itself, only the scripts required to make the packages. The Piccolo software is available from Bitbucket in the [piccolo2-server](https://bitbucket.org/teampiccolo/piccolo2-server), [piccolo3-client](https://bitbucket.org/teampiccolo/piccolo3-client) and [piccolo3-common](https://bitbucket.org/teampiccolo/piccolo3-common) repositories.
 
-This repository does not contain the Piccolo software itself, only the scripts required to make the packages. The Piccolo software is available from Bitbucket in the [piccolo2-server](https://bitbucket.org/teampiccolo/piccolo2-server), [piccolo2-client](https://bitbucket.org/teampiccolo/piccolo2-client) and [piccolo2-common](https://bitbucket.org/teampiccolo/piccolo2-common) repositories.
-
-More information about the Piccolo can be found in the [Piccolo User Guide](http://piccolo.readthedocs.io/en/latest/index.html).
 
 ## Required hardware
 A Raspberry Pi is required to compile the packages. The packages must be compiled on a Raspberry Pi and not an Ubuntu laptop or any other computer.
@@ -16,9 +13,9 @@ A Raspberry Pi is required to compile the packages. The packages must be compile
 ## Package bundles
 3 different package bundles are provided:
 
-* Server, ```piccolo2-server-bundle```, the Piccolo Server
-* Player, ```piccolo2-player-bundle```, the Piccolo GUI
-* Client, ```piccolo2-client-bundle```, the Piccolo command line client
+* Server, ```piccolo3-server-bundle```, the Piccolo Server
+* Web, ```piccolo3-web-bundle```, the Piccolo GUI
+* Client, ```piccolo3-client-bundle```, the Piccolo command line client
 
 ## Installing dependencies
 First of all you need to install some dependencies. On the Raspberry Pi, type:
@@ -42,11 +39,11 @@ If you have not already cloned the Piccolo repositories the clone them:
 ```
 cd /home/pi/somewhere
 
-hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-packaging
-hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-client
-hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-server
-hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-common
-hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo-hardware
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo3-packaging
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo3-client
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo3-server
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo3-common
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo3-web
 ```
 
 If you have already cloned the Piccolo repositories then update them:
@@ -54,40 +51,43 @@ If you have already cloned the Piccolo repositories then update them:
 ```
 cd /home/pi/somewhere
 
-cd piccolo2-packaging
+cd piccolo3-packaging
 hg pull
 hg update
 cd ..
 
-cd piccolo2-client
+cd piccolo3-client
 hg pull
 hg update
 cd ..
 
-cd piccolo2-server
+cd piccolo3-server
 hg pull
 hg update
 cd ..
 
-cd piccolo2-common
+cd piccolo3-common
 hg pull
 hg update
 cd ..
 
+cd piccolo3-web
+hg pull
+hg update
+cd ..
 
-
-hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-packaging
-hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-client
-hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-server
-hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo2-common
-hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo-hardware
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo3-packaging
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo3-client
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo3-server
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo3-common
+hg clone ssh://hg@bitbucket.org/teampiccolo/piccolo3-web
 ```
 
 
 ## Building the packages
 The package bundles are built by running the ```dpkg-buildpackage``` command in the corresponding subdirectory. For example:
 ```
-cd /home/pi/somewhere/piccolo2-packaging/client
+cd /home/pi/somewhere/piccolo3-packaging/client
 dpkg-buildpackage -us -uc
 ```
 If the error message
@@ -116,4 +116,3 @@ release the indevidual packages
 
 ## Install package on Piccolo
 
-To isntall the packages please follow [the instructions in the Piccolo User Guide](http://piccolo.readthedocs.io/en/latest/installing.html).
