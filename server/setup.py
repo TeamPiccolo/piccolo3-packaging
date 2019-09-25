@@ -18,7 +18,7 @@
 from setuptools import setup
 
 setup(
-    name = "piccolo2-server-bundle",
+    name = "piccolo3-server-bundle",
     version = "0.1",
 #    install_requires = [
 #        "piccolo2-common",
@@ -27,7 +27,7 @@ setup(
 
     # metadata for upload to PyPI
     author = "Magnus Hagdorn, Alasdair MacArthur, Iain Robinson",
-    description = "Part of the piccolo2 system. This package provides the client libraries",
+    description = "Part of the piccolo3 system. This package provides the client libraries",
     license = "GPL",
-    url = "https://bitbucket.org/uoepiccolo/piccolo2-client",
+    url = "https://bitbucket.org/uoepiccolo/piccolo3-server",
 )

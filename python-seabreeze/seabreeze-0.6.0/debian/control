@@ -2,7 +2,7 @@ Source: seabreeze
 Maintainer: Andreas Poehlmann <mail@andreaspoehlmann.de>
 Section: python
 Priority: optional
-Build-Depends: python-setuptools (>= 0.6b3), python-all-dev (>= 2.6.6-3), python3-all-dev (>= 3.4.2-2), debhelper (>= 9), python3-setuptools, libseabreeze-dev, swig
+Build-Depends: python-setuptools (>= 0.6b3), python-all-dev (>= 2.6.6-3), python3-all-dev (>= 3.4.2-2), debhelper (>= 9), python3-setuptools, libseabreeze-dev, swig, python-usb, python3-usb
 Standards-Version: 3.9.1
 X-Python3-Version: >= 3.4
 

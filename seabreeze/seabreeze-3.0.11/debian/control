@@ -4,7 +4,7 @@ Section: science
 Priority: optional
 Standards-Version: 3.9.5
 Homepage: https://oceanoptics.com/product/seabreeze/
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), libusb-dev
 
 Package: seabreeze
 Architecture: any
