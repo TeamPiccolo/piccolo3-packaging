@@ -1,0 +1,3 @@
+#!/bin/bash
+. /opt/venv/piccolo3-server/bin/activate
+exec piccolo3-integration-times $*

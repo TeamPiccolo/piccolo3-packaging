@@ -3,5 +3,6 @@ piccolo3-web    /usr/sbin
 piccolo3-reboot /usr/sbin
 piccolo3-triggered /usr/bin
 piccolo3-record /usr/bin
+piccolo3-integration-times /usr/bin
 piccolo.cfg /etc/
 piccolo3 /etc/default

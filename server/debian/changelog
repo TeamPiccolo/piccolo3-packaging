@@ -1,10 +1,11 @@
-piccolo3-server-bundle (0.1-1.2) UNRELEASED; urgency=medium
+piccolo3-server-bundle (0.1-1.3) UNRELEASED; urgency=medium
 
   [ Magnus Hagdorn ]
   * Non-maintainer upload.
   * new build against latest sources
+  * add wrapper for new script
 
- -- Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>  Thu, 21 Nov 2019 08:16:56 +0000
+ -- Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>  Thu, 10 Dec 2019 16:42:32 +0000
 
 piccolo3-server-bundle (0.1-1) unstable; urgency=medium
 
