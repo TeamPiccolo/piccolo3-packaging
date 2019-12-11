@@ -5,8 +5,8 @@ After=piccolo3-server.service
 [Service]
 Type=simple
 ExecStart=/usr/sbin/piccolo3-web
-StandardOutput=/var/log/piccolo3-web.log
-StandardError=/var/log/piccolo3-web.err
+StandardOutput=file:/var/log/piccolo3-web.log
+StandardError=file:/var/log/piccolo3-web.err
 Restart=on-failure
 
 [Install]
