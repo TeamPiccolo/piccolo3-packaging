@@ -1,3 +1,4 @@
+seabreeze >= 1.0.0
 ../../piccolo3-common
 ../../piccolo3-client
 ../../piccolo3-server

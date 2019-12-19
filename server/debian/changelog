@@ -1,4 +1,11 @@
-piccolo3-server-bundle (0.1-1.4) UNRELEASED; urgency=medium
+piccolo3-server-bundle (0.2-1) unstable; urgency=medium
+
+  * install python seabreeze package into virtual environment
+  * updated piccolo packages
+
+ --  Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>  Wed, 18 Dec 2019 10:47:37 +0000
+
+piccolo3-server-bundle (0.1-1.4) unstable; urgency=medium
 
   [ Magnus Hagdorn ]
   * Non-maintainer upload.
