@@ -1,3 +1,11 @@
+piccolo3-server-bundle (0.2-2) unstable; urgency=medium
+
+  [ Magnus Hagdorn ]
+  * Non-maintainer upload.
+  * new upstream handling sensor temperature
+
+ --  Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>  Mon, 23 Dec 2019 12:46:15 +0000
+
 piccolo3-server-bundle (0.2-1) unstable; urgency=medium
 
   * install python seabreeze package into virtual environment
