@@ -1,0 +1,10 @@
+[Unit]
+Description=piccolo3-triggered daemon
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/piccolo3-triggered
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

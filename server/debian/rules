@@ -12,3 +12,4 @@ override_dh_installinit:
 	dh_installinit --name=piccolo3-server
 	dh_installinit --name=piccolo3-reboot
 	dh_installinit --name=piccolo3-web
+	dh_installinit --name=piccolo3-triggered

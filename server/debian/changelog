@@ -1,3 +1,11 @@
+piccolo3-server-bundle (0.2-2.2) unstable; urgency=medium
+
+  [ magnus.hagdorn@ed.ac.uk ]
+  * Non-maintainer upload.
+  * improved client programs and add service for piccolo3-triggered
+
+ --  Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>  Fri, 17 Jan 2020 16:02:11 +0000
+
 piccolo3-server-bundle (0.2-2.1) unstable; urgency=medium
 
   [ Magnus Hagdorn ]
