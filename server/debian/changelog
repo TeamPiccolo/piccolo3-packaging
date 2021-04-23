@@ -1,8 +1,8 @@
-piccolo3-server-bundle (0.2-4) UNRELEASED; urgency=medium
+piccolo3-server-bundle (0.3-1) piccolo; urgency=medium
 
   * new upstream 
 
- -- Magnus Hagdorn <mhagdorn@piccolo3-8>  Wed, 11 Nov 2020 15:39:43 +0000
+ -- Magnus Hagdorn <magnus.hagdorn@ed.ac.uk>  Fri, 23 Apr 2021 15:17:47 +0000
 
 piccolo3-server-bundle (0.2-2.2) unstable; urgency=medium
 
